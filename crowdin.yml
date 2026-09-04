@@ -1,0 +1,23 @@
+# Crowdin CLI / GitHub Action configuration for TrP Labs localization.
+#
+# Credentials never live here — the workflow supplies both through the
+# environment, from repository secrets.
+"project_id_env": "CROWDIN_PROJECT_ID"
+"api_token_env": "CROWDIN_PERSONAL_TOKEN"
+
+# Keep Crowdin's file tree identical to this repository's. Without it Crowdin
+# strips the common parent directory and downloaded translations come back at
+# paths that do not match, which is the usual cause of a pull request full of
+# files in the wrong place.
+"preserve_hierarchy": true
+
+files:
+  # The source is the *generated* strings.json, not the strings.jsonc beside
+  # it. Crowdin's JSON parser reads strict JSON, and the comments in the JSONC
+  # are context for people rather than content for Crowdin — `scripts/build.mjs`
+  # is what turns one into the other, and CI fails if they are out of step.
+  #
+  # Translations come back as locales/<lang>/strings.json. A translated locale
+  # has no .jsonc of its own: English is the only file anybody edits by hand.
+  - source: "/locales/en/strings.json"
+    translation: "/locales/%two_letters_code%/strings.json"

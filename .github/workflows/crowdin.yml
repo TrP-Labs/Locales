@@ -1,0 +1,66 @@
+name: Crowdin
+
+# Sources go up when English changes; finished translations come back as a
+# pull request. `workflow_dispatch` is here so the sync can be run by hand
+# without waiting for a push.
+on:
+  push:
+    branches: [prod]
+    paths:
+      - 'locales/**'
+      - 'crowdin.yml'
+      - '.github/workflows/crowdin.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# Two runs against one Crowdin project race each other, and the second fails
+# with a 409 while the first is still building an export. Queue them instead.
+concurrency:
+  group: crowdin
+  cancel-in-progress: false
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # The committed strings.json is what Crowdin uploads, so it has to match
+      # the strings.jsonc it is generated from. Checked rather than
+      # regenerated: the action's git half runs `git add .`, so a file written
+      # here would be swept into the translation pull request.
+      - name: Check generated sources are in step
+        run: node scripts/build.mjs --check
+
+      - name: Synchronize with Crowdin
+        uses: crowdin/github-action@v3
+        with:
+          upload_sources: true
+          # Translations are authored in Crowdin, never here, so there is
+          # nothing in this repository to push up.
+          upload_translations: false
+          download_translations: true
+
+          localization_branch_name: l10n_crowdin
+          create_pull_request: true
+          pull_request_title: 'New translations from Crowdin'
+          pull_request_body: |
+            Translations downloaded from Crowdin.
+
+            Merging this only updates this repository. The website picks the
+            new wording up when `trptools-frontend` runs
+            `./scripts/pull-locales.sh` and ships a build — see the README.
+          # Unset, the base is whatever ref triggered the run, which is wrong
+          # for anything but a branch push.
+          pull_request_base_branch_name: prod
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}

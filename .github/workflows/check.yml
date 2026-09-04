@@ -1,0 +1,26 @@
+name: Check
+
+# Runs on every pull request, including the ones translators open by hand.
+# A malformed file caught here is a comment on the pull request; the same file
+# merged is a website that will not build.
+on:
+  pull_request:
+  push:
+    branches: [prod]
+
+permissions:
+  contents: read
+
+jobs:
+  strings:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Parses every strings.jsonc and confirms the generated strings.json
+      # beside it matches. Also the only thing standing between a stray comma
+      # and a broken build.
+      - run: node scripts/build.mjs --check
