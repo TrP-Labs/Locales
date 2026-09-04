@@ -665,6 +665,9 @@
 	"settings_settings_saved": "Settings saved",
 	"settings_settings_trp_tools": "Settings — TrP Tools",
 	"settings_shift_times_are_shown_zone": "Shift times are shown in this zone.",
+	// Shown under the time zone box on an account that has never set one, so
+	// the value in it is whatever the browser resolved rather than a choice.
+	"settings_time_zone_from_this_device": "Taken from this device. Save to keep it on your account.",
 	"settings_show_routes_have_marked_as_favorites": "Show the routes you have marked as favorites on your profile.",
 	"settings_show_routes_would_rather_not_given": "Show the routes you would rather not be given on your profile.",
 	"settings_sign_out_every_device_confirm": "Sign out of every device?",
@@ -1211,6 +1214,12 @@
 	"g_upcoming_shifts": "Upcoming shifts",
 	// {timezone} is an IANA zone like "Europe/Berlin"; {locale} is a language tag like "de". Neither is translated.
 	"g_apply_sending_as": "Sending as {timezone} · {locale}",
+	// Shown under the time zone and language fields on an application. The
+	// first is for an account that has set a zone; the second for one that is
+	// following whatever device it is being filled in on. Both are followed by
+	// a link reading "account settings".
+	"g_apply_account_says": "Your account says {timezone} · {locale}. Change that in",
+	"g_apply_account_has_no_zone": "Your account has no time zone set, so this is {timezone} · {locale} from this device. Set one in",
 
 	// ─── translate ───────────────────────────────────────────────
 	// The flag button beside every text box a group's members read. It
