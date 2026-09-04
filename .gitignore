@@ -1,1 +1,8 @@
 crowdin-context.jsonl
+
+# Crowdin credentials for running the CLI by hand from this directory.
+# This repository is public and the sync workflow runs `git add .`.
+.env
+batch-*.json
+blocked.txt
+.callsites.json
