@@ -1212,6 +1212,22 @@
 	// {timezone} is an IANA zone like "Europe/Berlin"; {locale} is a language tag like "de". Neither is translated.
 	"g_apply_sending_as": "Sending as {timezone} · {locale}",
 
+	// ─── translate ───────────────────────────────────────────────
+	// The flag button beside every text box a group's members read. It
+	// switches which language that box is typing, so one field can be
+	// written in several. {language} is a language's own name for itself —
+	// "Українська", not "Ukrainian" — and is never translated.
+	"translate_language_for_this_box": "Language for this box",
+	"translate_writing_in": "Writing in {language}",
+	"translate_writing_in_source": "Writing in {language}, this group's own language",
+	"translate_blank_falls_back_to": "Left blank, readers see the {language} version.",
+	"translate_source_language": "Source language",
+	"translate_source_language_description": "The language this group writes in. Everything you type is in this language, and it is what readers see when there is no version in theirs.",
+	"translate_group_name": "Group name",
+	"translate_group_name_hint": "What this group is called on TrP Tools. Leave it blank to follow the name on Roblox.",
+	// {name} is the group's name on Roblox, which is not translated.
+	"translate_following_roblox": "Following Roblox: {name}",
+
 	// ─── stage ───────────────────────────────────────────────────
 	// The stage lighting programmer.
 	"stage_marker_dialog_action": "Action",
