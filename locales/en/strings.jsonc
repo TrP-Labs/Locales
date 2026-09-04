@@ -334,6 +334,21 @@
 	"dashboard_bot_host_ping_role": "Host ping role",
 	"dashboard_bot_join_button_carries_either_way_staff": "The join button carries it either way. Staff who signed up are always given it.",
 	"dashboard_bot_join_link": "Join link",
+	// The Discord bot renders every message in each of a group's chosen
+	// languages, in order — "Upcoming shift / Наступна зміна".
+	"dashboard_bot_languages": "Languages",
+	"dashboard_bot_languages_description": "What the bot says things in. Every message it posts is shown in each of these, in this order — so a title reads “Upcoming shift / Наступна зміна”.",
+	"dashboard_bot_add_language": "Add language",
+	// A chip on the first language in the list. It leads every message, and is
+	// the one Discord uses on its own where only one will fit.
+	"dashboard_bot_language_leads": "Leads",
+	// {language} is a language's own name for itself — "Українська", not
+	// "Ukrainian". It is never translated.
+	"dashboard_bot_remove_language": "Remove {language}",
+	"dashboard_bot_move_language_earlier": "Move {language} earlier",
+	"dashboard_bot_every_language_added": "Every language is already on the list.",
+	// {max} is a number.
+	"dashboard_bot_languages_at_most": "{max} languages is as many as fits in one Discord message.",
 	"dashboard_bot_let_bot_run_these_itself_slash": "Let the bot run these itself. The slash commands stay available whether or not they are\n\t\t\t\tautomated, so a host can always do it by hand.",
 	"dashboard_bot_let_staff": "Let staff in",
 	"dashboard_bot_live_dispatch_manifest": "Live dispatch manifest",

@@ -12,9 +12,16 @@
  * `$schema` is dropped as well. It is a hint to editors, not a string anybody
  * should be asked to translate, and Crowdin would offer it as one.
  *
+ * **Every `.jsonc` in a language directory is built**, rather than one file
+ * with a known name. `strings.jsonc` is the website and `bot.jsonc` is the
+ * Discord bot — separate catalogues because they are separate products with
+ * separate releases, and because somebody translating the bot is reading
+ * Discord messages rather than web pages. A third one needs a file here and a
+ * `files:` entry in crowdin.yml, and nothing else.
+ *
  * Usage: node scripts/build.mjs [--check]
  */
-import { readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readdirSync, readFileSync, statSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { stripComments } from './jsonc-to-json.mjs';
 
@@ -23,38 +30,46 @@ const ROOT = 'locales';
 
 let failed = false;
 
-for (const locale of readdirSync(ROOT).sort()) {
-	const source = join(ROOT, locale, 'strings.jsonc');
-	if (!existsSync(source)) continue;
-
-	const target = join(ROOT, locale, 'strings.json');
-
+/** Builds one authored catalogue into the strict JSON beside it. */
+function build(source, target) {
 	let messages;
 	try {
 		messages = JSON.parse(stripComments(readFileSync(source, 'utf8')));
 	} catch (error) {
 		console.error(`${source}: not valid JSONC — ${error.message}`);
 		failed = true;
-		continue;
+		return;
 	}
 
 	delete messages.$schema;
 
 	const json = JSON.stringify(messages, null, '\t') + '\n';
+	const count = Object.keys(messages).length;
 
-	if (CHECK) {
-		const current = existsSync(target) ? readFileSync(target, 'utf8') : '';
-		if (current !== json) {
-			console.error(`${target} is out of date — run \`node scripts/build.mjs\` and commit.`);
-			failed = true;
-		} else {
-			console.log(`${target} is up to date (${Object.keys(messages).length} strings).`);
-		}
-		continue;
+	if (!CHECK) {
+		writeFileSync(target, json);
+		console.log(`Wrote ${target} (${count} strings).`);
+		return;
 	}
 
-	writeFileSync(target, json);
-	console.log(`Wrote ${target} (${Object.keys(messages).length} strings).`);
+	const current = existsSync(target) ? readFileSync(target, 'utf8') : '';
+
+	if (current !== json) {
+		console.error(`${target} is out of date — run \`node scripts/build.mjs\` and commit.`);
+		failed = true;
+	} else {
+		console.log(`${target} is up to date (${count} strings).`);
+	}
+}
+
+for (const locale of readdirSync(ROOT).sort()) {
+	const directory = join(ROOT, locale);
+	if (!statSync(directory).isDirectory()) continue;
+
+	for (const name of readdirSync(directory).sort()) {
+		if (!name.endsWith('.jsonc')) continue;
+		build(join(directory, name), join(directory, `${name.slice(0, -'.jsonc'.length)}.json`));
+	}
 }
 
 process.exit(failed ? 1 : 0);

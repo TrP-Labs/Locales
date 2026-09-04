@@ -21,3 +21,11 @@ files:
   # has no .jsonc of its own: English is the only file anybody edits by hand.
   - source: "/locales/en/strings.json"
     translation: "/locales/%two_letters_code%/strings.json"
+
+  # The Discord bot's own words, kept apart from the website's. They ship on
+  # separate release cycles and read nothing alike — a translator working on
+  # one is looking at Discord embeds, the other at web pages — so splitting
+  # them lets a language be finished for the site without the bot's strings
+  # sitting in the same queue.
+  - source: "/locales/en/bot.json"
+    translation: "/locales/%two_letters_code%/bot.json"
