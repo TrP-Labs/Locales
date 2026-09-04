@@ -76,7 +76,7 @@ The `Crowdin` workflow needs two repository secrets, under
 | Secret | Where it comes from |
 | --- | --- |
 | `CROWDIN_PROJECT_ID` | The Crowdin project's **Tools → API** tab. |
-| `CROWDIN_PERSONAL_TOKEN` | [crowdin.com/settings#api-key](https://crowdin.com/settings#api-key). Scope it to Projects (read), Translation status (read), Source files & strings (read/write), Translations (read/write). |
+| `CROWDIN_PERSONAL_TOKEN` | [crowdin.com/settings#api-key](https://crowdin.com/settings#api-key). Scope it to Projects (read), Translation status (read), Source files & strings (read/write), Translations (read/write). Add Screenshots (read/write) as well if the same token is used for the site's screenshot script, which this workflow does not need. |
 
 It also needs **Settings → Actions → General → Allow GitHub Actions to create
 and approve pull requests** switched on, or opening the translation pull
