@@ -531,6 +531,8 @@
 	"dashboard_ranks_where_rank_s_sheet_posted_if": "Where this rank's sheet is posted, if you run the bot.",
 	// {id} is a number and is never translated.
 	"dashboard_roblox_id": "Roblox ID {id}",
+	// {number} is Roblox’s own 0-255 rank ordering.
+	"dashboard_ranks_rank_number": "Rank {number}",
 	"dashboard_roblox_now_requires_authentication_read_group": "Roblox now requires authentication to read group membership.",
 	"dashboard_routes_all_depots": "All depots",
 	"dashboard_routes_could_not_create_route": "Could not create that route",
@@ -981,6 +983,8 @@
 	"applications_submission_list_record_cleared": "Record cleared",
 	// {date} is generated.
 	"applications_submission_list_record_cleared_on": "Record cleared {date} — this no longer stops them applying.",
+	// {date} is generated. When the applicant sent this in.
+	"applications_submission_list_sent_on": "Sent {date}",
 	"applications_submission_list_record_cleared_they_can_apply_again": "Record cleared — they can apply again",
 	"applications_submission_list_record_has_already_been_cleared": "This record has already been cleared",
 	"applications_submission_list_view_profile": "View profile",
@@ -1130,6 +1134,8 @@
 
 	// {target} is a phrase like "route 14" or "depot 2".
 	"moderation_report_target": "Report {target}",
+	// The visible label on the flag button. The sentence above is its tooltip.
+	"moderation_report": "Report",
 	// Stands in for {target} in the report dialog’s heading.
 	"moderation_content": "content",
 	// Stands in for {target} above when nothing more specific is known.
@@ -1242,6 +1248,8 @@
 	"g_apply_could_not_send_application": "Could not send that application",
 	// When a group made up its mind about this application.
 	"g_apply_decided_on": "Decided {date}.",
+	// {date} is generated. Shown on an application still waiting to be read.
+	"g_apply_sent_on_waiting": "Sent {date}. You will not be able to send another until it has been read.",
 	"g_apply_detect": "Detect",
 	"g_apply_done": "Done",
 	"g_apply_form_has_no_questions_yet": "This form has no questions on it yet.",
@@ -1255,6 +1263,11 @@
 	"g_apply_what_goes_with_application": "What goes with your application",
 	"g_apply_where_actually_are_not_where_group": "Where you actually are, not where the group is.",
 	"g_applying_for": "Applying for {rank}",
+	// {number} is the depot number the game uses. Shown as a badge.
+	"g_depot_number": "Depot {number}",
+	// The browser tab and link preview for one route’s page.
+	"g_route_page_title": "Route {route}",
+	"g_route_meta_description": "Route {route} on {group}.",
 	"g_copy_link": "Copy link",
 	"g_could_not_copy_link": "Could not copy that link",
 	"g_depot_about_depot": "About this depot",
@@ -1334,6 +1347,9 @@
 	"stage_marker_dialog_add_marker": "Add marker",
 	// {time} is a timecode like "1:23.4".
 	"stage_marker_dialog_add_marker_at": "Add marker at {time}",
+	// The transport controls on the stage programmer.
+	"stage_pause": "Pause",
+	"stage_play": "Play",
 	"stage_marker_dialog_fixtures": "Fixtures",
 	"stage_marker_dialog_flashes_throws": "Flashes and throws",
 	"stage_marker_dialog_lights": "Lights",
