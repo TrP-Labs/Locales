@@ -1265,6 +1265,9 @@
 	"g_depot_nothing_published_runs_from_depot_yet": "Nothing published runs from this depot yet.",
 	"g_depot_photos": "Photos",
 	"g_depot_routes_from_here": "Routes from here",
+	// Only ever used to fill {target} in "Report {target}", so it needs
+	// whatever case that sentence takes — accusative in Ukrainian, and so on.
+	// It is never shown on its own.
 	"g_group": "this group",
 	"g_group_has_no_shifts_coming_up": "This group has no shifts coming up.",
 	"g_group_has_not_published_any_routes": "This group has not published any routes yet.",
