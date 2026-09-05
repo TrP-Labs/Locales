@@ -37,8 +37,12 @@
 	"common_groups": "Groups",
 	"common_hidden": "Hidden",
 	"common_import": "Import",
+	// The label on a spinner, read out by screen readers.
+	"common_loading": "Loading",
 	"common_manage": "Manage",
 	"common_members_only": "Members only",
+	// The "…" button that opens a menu of extra actions.
+	"common_more_actions": "More actions",
 	"common_name": "Name",
 	"common_nothing_scheduled": "Nothing scheduled",
 	"common_open": "Open",
@@ -48,6 +52,8 @@
 	"common_routes": "Routes",
 	"common_save": "Save",
 	"common_save_changes": "Save changes",
+	// Shown in a dropdown before anything is chosen.
+	"common_select_placeholder": "Select…",
 	"common_settings": "Settings",
 	"common_shifts": "Shifts",
 	"common_sign_with_roblox": "Sign in with Roblox",
@@ -217,6 +223,9 @@
 	// ─── login ───────────────────────────────────────────────────
 	// Signing in.
 	"login_account_suspended": "This account is suspended.",
+	// {date} is generated. Shown to somebody whose account is suspended until then.
+	"login_can_sign_in_again_from": "You can sign in again from {date}.",
+	"login_contact_the_site_administrators": "Contact the site administrators if you think this is a mistake.",
 	"login_continue_with_roblox": "Continue with Roblox",
 	"login_sign_trp_tools": "Sign in — TrP Tools",
 	"login_sign_trp_tools_2": "Sign in to TrP Tools",
@@ -224,6 +233,8 @@
 	"login_trp_tools_uses_roblox_account_group": "TrP Tools uses your Roblox account. Your group ranks decide what you can do, so there is\n\t\t\tnothing else to set up.",
 	"login_we_request_permission_read_group_membership": "We request permission to read your group membership so ranks can be checked.",
 
+	// {page} is the address they were heading for before signing in.
+	"login_you_will_return_to": "You will return to {page} afterwards.",
 	// ─── groups ──────────────────────────────────────────────────
 	// The public directory of groups.
 	"groups_could_not_reach_api": "Could not reach the API",
@@ -254,6 +265,8 @@
 	"dashboard_applications_bind_rank_settings_before_opening_form": "Bind a rank in Settings before opening this form. Without one there is nothing an approval\n\t\t\t\t\twould be approving somebody for.",
 	"dashboard_applications_by_default_refusal_lasts_current_round": "By default a refusal lasts the current round: closing this form and opening it again\n\t\t\t\t\t\t\tlets everybody who was turned down apply afresh. An approval always lapses that way —\n\t\t\t\t\t\t\tsomebody who has since lost the rank should be able to ask for it back.",
 	"dashboard_applications_choose_rank": "Choose a rank…",
+	// A button. Stops the form accepting new applications; it keeps the ones already sent.
+	"dashboard_applications_close_applications": "Close applications",
 	"dashboard_applications_close_form": "Close form",
 	"dashboard_applications_cooldown": "Cooldown",
 	"dashboard_applications_could_not_change_application": "Could not change that application",
@@ -282,7 +295,11 @@
 	"dashboard_applications_nothing_decided_yet": "Nothing decided yet",
 	"dashboard_applications_nothing_review": "Nothing to review",
 	"dashboard_applications_one_cannot_undone": "This one cannot be undone.",
+	// The same button when the form is closed.
+	"dashboard_applications_open_applications": "Open applications",
 	"dashboard_applications_open_form": "Open form",
+	// A link to one application form. {name} is what the group called it.
+	"dashboard_applications_open_named_form": "Open {name}",
 	"dashboard_applications_public_address": "Public address:",
 	"dashboard_applications_rank": "Rank",
 	"dashboard_applications_refusals": "Refusals",
@@ -311,6 +328,10 @@
 	"dashboard_bot_cannot_delete_here_needs_manage_messages": "cannot delete here — needs Manage Messages and Read Message History",
 	"dashboard_bot_channels_roles": "Channels and roles",
 	"dashboard_bot_channels_will_clear": "Channels it will clear",
+	// The heading on the Discord channel picker.
+	"dashboard_bot_choose_channel": "Choose a channel",
+	// The heading on the Discord role picker.
+	"dashboard_bot_choose_role": "Choose a role",
 	"dashboard_bot_clear_sign_up_messages_post_satisfaction": "Clear the sign-up messages and post the satisfaction poll.",
 	"dashboard_bot_close_shift_out": "Close the shift out",
 	"dashboard_bot_closing_shift_out_deletes_messages_bot": "Closing a shift out deletes the messages the bot posted for it, and nothing else —\n\t\t\t\t\t\tanything people said in those channels is left alone. Choose which of its own posts\n\t\t\t\t\t\tit takes down.",
@@ -508,6 +529,8 @@
 	"dashboard_ranks_unbind_confirm": "Unbind “{rank}”? Members holding it will lose TrP Tools access.",
 	"dashboard_ranks_what_members_holding_rank_can_do": "What members holding this rank can do here.",
 	"dashboard_ranks_where_rank_s_sheet_posted_if": "Where this rank's sheet is posted, if you run the bot.",
+	// {id} is a number and is never translated.
+	"dashboard_roblox_id": "Roblox ID {id}",
 	"dashboard_roblox_now_requires_authentication_read_group": "Roblox now requires authentication to read group membership.",
 	"dashboard_routes_all_depots": "All depots",
 	"dashboard_routes_could_not_create_route": "Could not create that route",
@@ -596,6 +619,8 @@
 	"dashboard_shifts_no_recurring_shifts_defined": "No recurring shifts defined.",
 	"dashboard_shifts_no_shifts_are_scheduled_next_month": "No shifts are scheduled for the next month.",
 	"dashboard_shifts_recurring_services_who_has_signed_up": "Recurring services and who has signed up for each one.",
+	// {recurrence} is a phrase like "every Saturday"; {duration} is a length like "2h".
+	"dashboard_shifts_repeats_every": "Repeats {recurrence} · {duration}",
 	"dashboard_shifts_schedules": "Schedules",
 	"dashboard_shifts_shift_created": "Shift created",
 	"dashboard_shifts_shift_deleted": "Shift deleted",
@@ -621,11 +646,17 @@
 	"settings_api_keys_could_not_revoke_key": "Could not revoke that key",
 	"settings_api_keys_create_key": "Create key",
 	"settings_api_keys_create_one_let_integration_act_behalf": "Create one to let an integration act on your behalf.",
+	// {when} is a relative time like "3 days ago".
+	"settings_api_keys_created_ago": "Created {when}",
 	"settings_api_keys_done": "Done",
 	"settings_api_keys_e_g_discord_bot": "e.g. Discord bot",
 	"settings_api_keys_grant_only_what_integration_needs": "Grant only what the integration needs.",
 	"settings_api_keys_integrations_such_as_trp_tools_discord": "For integrations such as the TrP Tools Discord bot. Keys act as you.",
 	"settings_api_keys_key_revoked": "Key revoked",
+	// Follows "Created …" after a separator, so it starts lowercase.
+	"settings_api_keys_last_used_ago": "last used {when}",
+	// The same position as above, for a key nobody has used yet.
+	"settings_api_keys_never_used": "never used",
 	"settings_api_keys_new_api_key": "New API key",
 	"settings_api_keys_new_key": "New key",
 	"settings_api_keys_no_api_keys": "No API keys",
@@ -683,6 +714,8 @@
 
 	// ─── admin ───────────────────────────────────────────────────
 	// Site administration, seen only by TrP Tools admins.
+	// Stands in for a name, inside "Reported by …".
+	"admin_a_deleted_account": "a deleted account",
 	"admin_accounts": "Accounts",
 	"admin_administration": "Administration",
 	"admin_administration_trp_tools": "Administration — TrP Tools",
@@ -695,6 +728,7 @@
 	"admin_no_reports_with_status": "No reports with that status.",
 	"admin_nothing_review": "Nothing to review",
 	"admin_open_reports": "Open reports",
+	"admin_reported_by": "Reported by {name}",
 	"admin_reported_content": "Reported content",
 	"admin_reported_item_no_longer_exists": "The reported item no longer exists.",
 	"admin_reports": "Reports",
@@ -745,6 +779,8 @@
 	"shifts_rank_signup_editor_could_not_save_sign_up_sheet": "Could not save the sign-up sheet",
 	"shifts_rank_signup_editor_e_g_dispatcher": "e.g. Dispatcher",
 	"shifts_rank_signup_editor_e_g_runs_shift_from_dispatch": "e.g. Runs the shift from the dispatch room.",
+	// {rank} is a Roblox rank name the group chose.
+	"shifts_rank_signup_editor_no_sheet_description": "Slots people at this rank or above can take on any shift. Nobody below {rank} ever sees it.",
 	"shifts_rank_signup_editor_no_sign_up_sheet": "No sign-up sheet",
 	"shifts_rank_signup_editor_no_slots_yet_sheet_with_no": "No slots yet. A sheet with no slots is not shown to anyone.",
 	"shifts_rank_signup_editor_open_sign_ups": "Open for sign-ups",
@@ -844,6 +880,7 @@
 	"dispatch_room_status_reconnecting": "Reconnecting",
 	"dispatch_room_status_see_who_room": "See who is in this room",
 	"dispatch_shift_countdown_dispatch_room_opened_scheduled_shift_add": "A dispatch room is opened for a scheduled shift. Add one to the schedule and it will appear here.",
+	"dispatch_shift_countdown_everyone_can_join": "Everyone with dispatch access can join once the room is open.",
 	"dispatch_shift_countdown_host_needs_open_room_before_can": "A host needs to open the room before you can join.",
 	"dispatch_shift_countdown_manage_shifts": "Manage shifts",
 	"dispatch_shift_countdown_next_shift": "Next shift",
@@ -851,14 +888,24 @@
 	"dispatch_shift_countdown_open_room": "Open room",
 	"dispatch_shift_countdown_running_now": "Running now",
 	"dispatch_shift_countdown_there_nothing_scheduled_so_no_room": "There is nothing scheduled, so no room can be opened yet.",
+	// {when} is a relative time like "in 10 minutes".
+	"dispatch_shift_countdown_unlocks": "Unlocks {when}.",
 	"dispatch_shift_end_chip_shift_over": "Shift over",
 	"dispatch_shift_end_chip_until_shift_ends": "until this shift ends",
 	"dispatch_vehicle_row_assign_route_automatically": "Assign a route automatically",
+	// Read out by screen readers. {vehicle} is the number painted on it.
+	"dispatch_vehicle_row_assign_route_to_vehicle": "Assign a route automatically to vehicle {vehicle}",
 	"dispatch_vehicle_row_assigned": "Assigned",
 	"dispatch_vehicle_row_custom_note": "Custom note",
 	"dispatch_vehicle_row_end_tow": "End tow",
 	"dispatch_vehicle_row_location": "Location",
 	"dispatch_vehicle_row_pick_vehicle_tow_press_again_cancel": "Pick a vehicle to tow, or press again to cancel",
+	"dispatch_vehicle_row_remove_vehicle": "Remove vehicle {vehicle}",
+	// {route} is a route name the group chose; {depot} is a spawn name the game
+	// reports. Shown when a vehicle is on a route its depot cannot reach.
+	"dispatch_vehicle_row_does_not_run_from": "{route} does not run from {depot}",
+	"dispatch_vehicle_row_driver_favorite_route": "{route} is one of this driver\u2019s favorite routes",
+	"dispatch_vehicle_row_route_for_vehicle": "Route for vehicle {vehicle}",
 	"dispatch_vehicle_row_scenery": "Scenery",
 	"dispatch_vehicle_row_tow_vehicle": "Tow a vehicle",
 	"dispatch_vehicle_row_towing_vehicle": "is towing this\n\t\t\t\t\t\t\tvehicle",
@@ -872,6 +919,10 @@
 	"dispatch_vehicle_types_card_vehicles": "Vehicles",
 	"dispatch_vehicle_types_card_which_list_each_vehicle_appears_dispatch": "Which list each vehicle appears in on the dispatch board. Names must match the game exactly; anything not listed is guessed from its name.",
 
+	// In the vehicle table. {vehicle} is a model name from the game, or the phrase below.
+	"dispatch_vehicle_types_remove": "Remove {vehicle}",
+	// Stands in for a model name nobody has typed yet.
+	"dispatch_vehicle_types_this_vehicle": "this vehicle",
 	// ─── applications ────────────────────────────────────────────
 	// Application forms and the submissions sent to them.
 	"applications_question_editor_add_choice": "Add choice",
@@ -928,12 +979,22 @@
 	"applications_submission_list_note_records_applicant_read_optional": "A note for your records, and for the applicant to read. Optional.",
 	"applications_submission_list_record_actions": "Record actions",
 	"applications_submission_list_record_cleared": "Record cleared",
+	// {date} is generated.
+	"applications_submission_list_record_cleared_on": "Record cleared {date} — this no longer stops them applying.",
 	"applications_submission_list_record_cleared_they_can_apply_again": "Record cleared — they can apply again",
 	"applications_submission_list_record_has_already_been_cleared": "This record has already been cleared",
 	"applications_submission_list_view_profile": "View profile",
 
 	// ─── routes ──────────────────────────────────────────────────
 	// Routes and route preferences.
+	// A built-in route is the same route everywhere, so marking it is not per group.
+	"routes_preference_applies_in_every_group": "Applies to route {route} in every group.",
+	// A route this driver would rather not be given.
+	"routes_preference_disliked": "Disliked",
+	// A route this driver has asked for.
+	"routes_preference_favorite": "Favorite",
+	// The button before either of the two above has been chosen.
+	"routes_preference_rate_route": "Rate route",
 	"routes_route_editor_automatic": "Automatic",
 	"routes_route_editor_automatic_assignment_only_puts_vehicles_routes": "Automatic assignment only puts vehicles on routes their depot serves. Select none to serve every depot.",
 	"routes_route_editor_automatic_makes_short_names_round_long": "Automatic makes short names round and long names rectangular.",
@@ -1067,11 +1128,19 @@
 	"moderation_report_dialog_send_report": "Send report",
 	"moderation_report_dialog_sign": "Sign in",
 
+	// {target} is a phrase like "route 14" or "depot 2".
+	"moderation_report_target": "Report {target}",
+	// Stands in for {target} in the report dialog’s heading.
+	"moderation_content": "content",
+	// Stands in for {target} above when nothing more specific is known.
+	"moderation_this_content": "this content",
 	// ─── users ───────────────────────────────────────────────────
 	// Profiles and rosters.
 	"users_disliked_routes": "Disliked routes",
 	"users_favorite_routes": "Favorite routes",
 	"users_rank_roster_nobody_holds_rank_right_now": "Nobody holds this rank right now.",
+	// Read out by screen readers, naming a row of the roster.
+	"users_rank_roster_rank_members": "{rank} members",
 	"users_roblox_profile": "Roblox profile",
 
 	// ─── layout ──────────────────────────────────────────────────
@@ -1156,6 +1225,7 @@
 
 	// ─── g ───────────────────────────────────────────────────────
 	// A public group page, and the depot, route and shift pages under it.
+	"g_all_routes_and_depots_on": "All routes and depots on {group}",
 	"g_apply_account_settings": "account settings",
 	"g_apply_already_rank_above": "You already rank above this",
 	"g_apply_answer": "Your answer",
@@ -1166,8 +1236,12 @@
 	"g_apply_application_with_group": "Your application is with the group",
 	"g_apply_applications_are_closed": "Applications are closed",
 	"g_apply_applications_are_tied_roblox_account_so": "Applications are tied to your Roblox account, so the group knows who they are reading.",
+	// {relative} is like "in 3 weeks"; {date} is the exact day.
+	"g_apply_can_apply_again_on": "You can apply again {relative}, on {date}.",
 	"g_apply_code_such_as_en_en_gb": "A code such as en, en-GB or de.",
 	"g_apply_could_not_send_application": "Could not send that application",
+	// When a group made up its mind about this application.
+	"g_apply_decided_on": "Decided {date}.",
 	"g_apply_detect": "Detect",
 	"g_apply_done": "Done",
 	"g_apply_form_has_no_questions_yet": "This form has no questions on it yet.",
@@ -1180,6 +1254,7 @@
 	"g_apply_time_zone_language_are_sent_with": "Your time zone and language are sent with the form so the group knows when you are around. This changes them for this application only.",
 	"g_apply_what_goes_with_application": "What goes with your application",
 	"g_apply_where_actually_are_not_where_group": "Where you actually are, not where the group is.",
+	"g_applying_for": "Applying for {rank}",
 	"g_copy_link": "Copy link",
 	"g_could_not_copy_link": "Could not copy that link",
 	"g_depot_about_depot": "About this depot",
@@ -1195,7 +1270,15 @@
 	"g_group_has_not_published_any_routes": "This group has not published any routes yet.",
 	"g_link_copied": "Link copied",
 	"g_no_public_routes": "No public routes",
+	// Read out by screen readers for a card that links to a depot.
+	"g_open_depot": "Open depot {depot}",
+	// The same, for a route.
+	"g_open_route": "Open route {route}",
 	"g_report_depot": "Report depot",
+	// Fills {target} in "Report …", so it starts lowercase.
+	"g_report_label_depot": "depot {number}",
+	// The same, for a route.
+	"g_report_label_route": "route {route}",
 	"g_report_route": "Report route",
 	"g_roblox_group": "Roblox group",
 	"g_route_about_route": "About this route",
@@ -1210,6 +1293,11 @@
 	"g_shift_next_occurrences": "Next occurrences",
 	"g_shift_no_occurrences_next_two_months": "No occurrences in the next two months.",
 	"g_shift_sign_up": "Sign up",
+	// Collapses a list that was expanded.
+	"g_show_less": "Show less",
+	// {count} is a number. The button that reveals the rest of a shortened list.
+	"g_show_more": "Show {count} more",
+	"g_shift_signups_for_next_open": "Sign-ups for the next one open {when}.",
 	"g_staff": "Staff",
 	"g_upcoming_shifts": "Upcoming shifts",
 	// {timezone} is an IANA zone like "Europe/Berlin"; {locale} is a language tag like "de". Neither is translated.
@@ -1241,6 +1329,8 @@
 	// The stage lighting programmer.
 	"stage_marker_dialog_action": "Action",
 	"stage_marker_dialog_add_marker": "Add marker",
+	// {time} is a timecode like "1:23.4".
+	"stage_marker_dialog_add_marker_at": "Add marker at {time}",
 	"stage_marker_dialog_fixtures": "Fixtures",
 	"stage_marker_dialog_flashes_throws": "Flashes and throws",
 	"stage_marker_dialog_lights": "Lights",
