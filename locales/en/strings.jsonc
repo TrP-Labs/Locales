@@ -54,6 +54,9 @@
 	"common_public_page": "Public page",
 	"common_ranks": "Ranks",
 	"common_routes": "Routes",
+	// {id} is a Roblox user ID. Shown instead of a username when the account has
+	// no username on record.
+	"common_roblox_id": "Roblox {id}",
 	// {count} — filled in at runtime. A badge counting the routes on a group or depot.
 	"common_routes_count": "{count} routes",
 	"common_save": "Save",
@@ -883,9 +886,6 @@
 	"admin_users_nobody_suspended_right_now": "Nobody is suspended right now.",
 	"admin_users_nothing_matched_search": "Nothing matched that search.",
 	"admin_users_permanent": "Permanent",
-	// {id} is a Roblox user ID. Shown instead of a username when the account has
-	// no username on record.
-	"admin_users_roblox_id": "Roblox {id}",
 	"admin_users_search": "Search",
 	// {when} is a phrase like “3 months ago”. When a suspension was applied.
 	"admin_users_set_ago": "set {when}",
