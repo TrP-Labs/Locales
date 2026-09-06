@@ -713,6 +713,10 @@
 	"settings_what_other_people_can_see_about": "What other people can see about you.",
 	"settings_appearance_automatic": "Automatic",
 	"settings_appearance_follows_browser_language": "Follows your browser's language.",
+	// Sits under a language on the appearance page when that translation is
+	// still short of the whole site, so somebody picking it knows some of the
+	// interface will stay in English rather than thinking it is broken.
+	"settings_appearance_partly_translated": "Partly translated",
 
 	// ─── admin ───────────────────────────────────────────────────
 	// Site administration, seen only by TrP Tools admins.
