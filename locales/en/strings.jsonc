@@ -790,12 +790,17 @@
 	"settings_appearance_bright": "Bright",
 	"settings_appearance_dim": "Dim",
 	"settings_appearance_how_trp_tools_looks_account": "How TrP Tools looks on this account.",
+	// The same page as settings_appearance_how_trp_tools_looks_account, seen by
+	// somebody who is not signed in — nothing can be saved to an account, so the
+	// choice only covers this browser.
+	"settings_appearance_how_trp_tools_looks_device": "How TrP Tools looks on this device.",
 	"settings_appearance_language": "Language",
 	"settings_appearance_language_description": "What language TrP Tools speaks to you in.",
 	"settings_appearance_light": "Light",
 	"settings_appearance_midnight": "Midnight",
 	"settings_appearance_near_black": "Near black",
 	"settings_appearance_saved_device_but_could_not_sync": "Saved on this device, but could not sync to your account",
+	"settings_appearance_sign_in_to_keep": "Saved in this browser. Sign in to keep these on your account and across your devices.",
 	"settings_appearance_soft_dark_gray": "Soft dark gray",
 	"settings_appearance_theme": "Theme",
 	"settings_bypass_every_group_s_permissions_administration": "On, you bypass every group's permissions and the administration portal opens. Off,\n\t\t\t\t\tTrP Tools treats you as an ordinary account — only groups you actually hold a rank in appear\n\t\t\t\t\tin your dashboard, on the home page and in your shifts.",
@@ -1345,6 +1350,9 @@
 	"layout_header_admin_mode_session": "Admin mode is on for this session",
 	"layout_header_close_menu": "Close menu",
 	"layout_header_open_menu": "Open menu",
+	// The button beside Sign in, for a reader who is not signed in. It opens the
+	// appearance settings.
+	"layout_header_theme_and_language": "Theme and language",
 	"layout_header_tools": "Tools",
 	"layout_header_wiki": "Wiki",
 	"layout_object_page_sections": "Sections",
