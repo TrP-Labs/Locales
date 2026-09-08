@@ -103,6 +103,7 @@
 	"api_error_internal_server_error": "Internal Server Error",
 	"api_error_invalid_recurrence_rule": "invalid recurrence rule",
 	"api_error_no_bot_is_connected_to_this_group": "no bot is connected to this group",
+	"api_error_no_discord_account_is_linked": "no Discord account is linked",
 	"api_error_not_found": "Not found",
 	"api_error_program_is_not_valid": "program is not valid",
 	"api_error_rank_already_exists": "rank already exists",
@@ -122,6 +123,8 @@
 	"api_error_that_vehicle_is_not_in_this_room": "that vehicle is not in this room",
 	"api_error_this_application_has_already_been_decided": "this application has already been decided",
 	"api_error_this_application_is_closed": "this application is closed",
+	"api_error_this_group_asks_applicants_to_link_a": "this group asks applicants to link a Discord account first",
+	"api_error_this_group_asks_you_to_link_a": "this group asks you to link a Discord account before signing up",
 	"api_error_this_group_already_has_a_room_open": "this group already has a room open",
 	"api_error_this_shift_is_not_running_right_now": "this shift is not running right now",
 	"api_error_too_many_requests": "Too Many Requests",
@@ -559,6 +562,14 @@
 	"dashboard_bot_remind_hosts_signed_up_staff_before": "Remind hosts and signed-up staff before a shift.",
 	"dashboard_bot_reminders": "Reminders",
 	"dashboard_bot_server_already_connected_another_group": "That Discord server is already connected to another group",
+	// The tabs the bot page is divided into, sitting in a row across the top.
+	// Each is a short noun; the cards inside them keep their own longer
+	// headings, so these say which part of the bot rather than what it does.
+	"dashboard_bot_section_server": "Server",
+	"dashboard_bot_section_messages": "Messages",
+	"dashboard_bot_section_features": "Features",
+	"dashboard_bot_section_automation": "Automation",
+	"dashboard_bot_section_cleanup": "Cleanup",
 	"dashboard_bot_sheets_themselves_come_pings_each_rank": "The sheets themselves and the “come on in” pings, in each rank’s own channel.",
 	"dashboard_bot_shift_announcement_channel": "Shift announcement channel",
 	"dashboard_bot_shift_announcements": "Shift announcements",
@@ -747,6 +758,16 @@
 	"dashboard_settings_could_not_save_those_settings": "Could not save those settings",
 	"dashboard_settings_create_api_key_owned_by": "Create an API key owned by",
 	"dashboard_settings_creator_dashboard_credentials": "Creator Dashboard credentials",
+	// The Discord section of group settings. A group that runs its shifts on
+	// Discord can insist its members are reachable there before they take a
+	// slot or send an application.
+	"dashboard_settings_discord_requirements": "Discord requirements",
+	"dashboard_settings_what_members_connect_before_taking_part": "What members have to connect before they can take part.",
+	"dashboard_settings_require_discord_sign_up": "Require Discord to sign up for shifts",
+	"dashboard_settings_members_without_discord_cannot_take_slot": "Members without a connected Discord account cannot take a slot. Anyone already signed up keeps their slot, and can still withdraw from it.",
+	"dashboard_settings_require_discord_apply": "Require Discord to apply",
+	"dashboard_settings_applicants_connect_discord_before_sending": "Applicants have to connect a Discord account before sending a staff application.",
+	"dashboard_settings_discord_account_sent_with_every_application": "A connected Discord account is sent with every application either way, so whoever reviews one can reach the applicant.",
 	"dashboard_settings_dispatch_page_counts_down_next_shift": "The dispatch page counts down to the next shift and unlocks its Open room button once the countdown falls inside this window. Set 0 to allow opening only once the shift has started.",
 	"dashboard_settings_group": "Group",
 	"dashboard_settings_group_read": "group:read",
@@ -788,6 +809,8 @@
 	"dashboard_settings_section_vehicles": "Vehicles",
 	// The Roblox API surface, which is a product name — leave it in English.
 	"dashboard_settings_section_open_cloud": "Open Cloud",
+	// The service name, which is a brand — leave it in English.
+	"dashboard_settings_section_discord": "Discord",
 	"dashboard_settings_section_audit_log": "Audit log",
 	"dashboard_settings_visibility_description": "Who can find this group, and what its page shows them.",
 	"dashboard_settings_settings_saved": "Settings saved",
@@ -886,6 +909,28 @@
 	"settings_could_not_save_settings": "Could not save your settings",
 	"settings_could_not_sign_out": "Could not sign out",
 	"settings_detect": "Detect",
+	// The Discord card on the account page. Linking is optional site-wide — a
+	// group may require it before it accepts a sign-up or an application, and
+	// that is the only thing it decides.
+	"settings_discord_account": "Discord account",
+	"settings_discord_groups_running_shifts_can_reach_you": "Groups running their shifts on Discord can reach you, and your sign-ups show as the same person in both places.",
+	"settings_discord_connect": "Connect Discord",
+	"settings_discord_change_account": "Change account",
+	"settings_discord_disconnect": "Disconnect",
+	"settings_discord_nothing_connected": "No Discord account connected",
+	// {when} is a relative time like "3 days ago".
+	"settings_discord_connected_ago": "Connected {when}",
+	"settings_discord_disconnect_confirm": "Disconnect your Discord account? Groups that require one will stop accepting new sign-ups and applications from you.",
+	"settings_discord_connected": "Discord account connected",
+	"settings_discord_disconnected": "Discord account disconnected",
+	"settings_discord_could_not_start": "Could not start the Discord sign-in",
+	"settings_discord_could_not_disconnect": "Could not disconnect your Discord account",
+	// The four ways connecting can fail, shown when Discord sends the browser
+	// back to this page without having connected anything.
+	"settings_discord_canceled": "The Discord sign-in was canceled",
+	"settings_discord_took_too_long": "That took too long — try connecting again",
+	"settings_discord_already_connected_elsewhere": "That Discord account is already connected to another TrP Tools account",
+	"settings_discord_could_not_confirm": "Discord could not confirm that account",
 	"settings_disliked_routes": "Disliked routes",
 	"settings_ends_with_session_off_every_new": "It ends with this session, and it is off on every new sign-in. API keys are never elevated.",
 	"settings_favorite_routes": "Favorite routes",
@@ -1041,6 +1086,10 @@
 	"shifts_signup_sheets_can_only_hold_one_slot_per": "You can only hold one slot per shift. Withdraw from it to take a different one.",
 	"shifts_signup_sheets_could_not_sign_up": "Could not sign you up",
 	"shifts_signup_sheets_could_not_withdraw": "Could not withdraw you",
+	// Shown in place of the sign-up buttons when the group asks for a connected
+	// Discord account and the reader has none.
+	"shifts_signup_sheets_discord_required": "This group asks you to connect a Discord account before signing up.",
+	"shifts_signup_sheets_connect_discord": "Connect Discord",
 	"shifts_signup_sheets_full": "Full",
 	"shifts_signup_sheets_nobody_yet": "Nobody yet",
 	// {rank} is the name of a rank in the group: who may take a slot on this sheet.
@@ -1193,6 +1242,10 @@
 	// Stands in for a reviewer’s name in applications_submission_list_decided_by
 	// when the account is no longer readable.
 	"applications_submission_list_a_manager": "a manager",
+	// Sits beside the applicant's time zone on an application, as the
+	// Discord account they had connected when they sent it. The other line
+	// is for an application sent before they connected one.
+	"applications_submission_list_no_discord_account": "No Discord account",
 	"applications_submission_list_application_approved": "Application approved",
 	"applications_submission_list_application_deleted": "Application deleted",
 	"applications_submission_list_application_denied": "Application denied",
@@ -1520,6 +1573,15 @@
 	"g_all_routes_and_depots_on": "All routes and depots on {group}",
 	"g_apply_account_settings": "account settings",
 	"g_apply_already_rank_above": "You already rank above this",
+	// The apply page, when the group asks applicants to be reachable on Discord
+	// and the reader has connected nothing.
+	"g_apply_connect_discord_first": "Connect a Discord account first",
+	"g_apply_group_asks_applicants_connect_discord": "{group} asks applicants to connect a Discord account, so whoever reads your application can reach you about it.",
+	"g_apply_connect_discord": "Connect Discord",
+	// Added under the sign-in card when the group requires Discord, so
+	// somebody who is not signed in yet knows about both steps up front
+	// rather than meeting the second one after the first.
+	"g_apply_discord_also_needed": "This group also asks applicants to connect a Discord account.",
 	"g_apply_answer": "Your answer",
 	"g_apply_answer_every_required_question_first": "Answer every required question first",
 	"g_apply_application_sent": "Application sent",
