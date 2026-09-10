@@ -287,6 +287,17 @@
 	// {slots} is a number.
 	"bot_status_sheet_line": "**{sheet}** ({rank}+) → {channel} · {slots} slots",
 	"bot_status_sheet_line_one": "**{sheet}** ({rank}+) → {channel} · 1 slot",
+	// One line per sign-up sheet in /status. {ranks} is the list of Roblox
+	// ranks the sheet is open to, already joined with commas, or the word
+	// below when it is open to the whole group. These replace the older
+	// bot_status_sheet_line pair, which assumed a sheet had exactly one rank
+	// and wrote a "+" after it to mean "and above" — sheets now carry a list.
+	"bot_status_sheet_ranks": "**{sheet}** ({ranks}) → {channel} · {slots} slots",
+	"bot_status_sheet_ranks_one": "**{sheet}** ({ranks}) → {channel} · 1 slot",
+	// Stands in for the rank list above when a sheet names no ranks, which
+	// means every member of the group. Lowercase: it sits inside brackets
+	// mid-line, not at the start of a sentence.
+	"bot_status_sheet_everyone": "everyone",
 	"bot_status_no_sheets": "*None set up. Add one per rank on the Ranks page.*",
 	"bot_status_shifts": "Shifts",
 	"bot_status_running_now": "Running now: **{name}**, ends {relative}",

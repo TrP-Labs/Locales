@@ -68,6 +68,9 @@
 	"common_settings": "Settings",
 	"common_shifts": "Shifts",
 	"common_sign_with_roblox": "Sign in with Roblox",
+	// The dashboard section where a group builds its sign-up sheets, and the
+	// sheets themselves. Plural; the singular "sign-up" is one person's.
+	"common_signups": "Sign-ups",
 	// {filled} and {capacity} are numbers: how many of a shift’s slots are taken.
 	"common_signed_up_of": "{filled}/{capacity} signed up",
 	"common_something_went_wrong": "Something went wrong",
@@ -112,6 +115,7 @@
 	"api_error_roblox_oauth_is_not_configured": "Roblox OAuth is not configured",
 	"api_error_roblox_rejected_that_key_check_it_was": "roblox rejected that key — check it was copied whole and is not revoked",
 	"api_error_sign_ups_are_not_open_for_that": "sign-ups are not open for that shift yet",
+	"api_error_sign_up_sheet_does_not_exist": "sign-up sheet does not exist",
 	"api_error_site_administrators_cannot_be_suspended": "site administrators cannot be suspended",
 	"api_error_slug_is_unavailable": "slug is unavailable",
 	"api_error_that_application_does_not_exist": "that application does not exist",
@@ -119,6 +123,7 @@
 	"api_error_that_key_belongs_to_the_group_roblox": "that key belongs to the group — Roblox Open Cloud only accepts keys owned by a user account",
 	"api_error_that_record_has_already_been_cleared": "that record has already been cleared",
 	"api_error_that_slot_is_full": "that slot is full",
+	"api_error_that_slot_is_on_a_different_shift": "that slot is on a different shift",
 	"api_error_that_vehicle_is_already_being_towed": "that vehicle is already being towed",
 	"api_error_that_vehicle_is_not_in_this_room": "that vehicle is not in this room",
 	"api_error_this_application_has_already_been_decided": "this application has already been decided",
@@ -157,12 +162,15 @@
 	"error_need_manage_access_ranks": "You need manage access to edit ranks",
 	"error_need_manage_access_routes": "You need manage access to edit routes",
 	"error_need_manage_access_settings": "You need manage access to change settings",
+	"error_need_manage_access_shifts": "You need manage access to edit shifts",
+	"error_need_manage_access_signups": "You need manage access to edit sign-ups",
 	"error_no_access": "You do not have access",
 	"error_no_access_to_group": "You do not have access to this group",
 	"error_page_not_found": "Page not found",
 	"error_profile_not_available": "That profile is not available",
 	"error_rank_not_bound_here": "That rank is not bound here",
 	"error_route_does_not_exist": "That route does not exist",
+	"error_sheet_does_not_exist": "That sign-up sheet does not exist",
 	"error_shift_does_not_exist": "That shift does not exist",
 
 	// ─── permission ──────────────────────────────────────────────
@@ -195,6 +203,15 @@
 	"permission_start_room_hint": "Open a dispatch room for a shift, and close it again.",
 	"permission_manage_shifts": "Edit shifts",
 	"permission_manage_shifts_hint": "Create, change and delete shifts and their schedules.",
+	"permission_manage_signups": "Manage sign-ups",
+	"permission_manage_signups_hint": "Build sign-up sheets: their slots, who each slot is for, and where the bot posts them.",
+	"permission_override_signups": "Override sign-up permissions",
+	// "the list" is the set of ranks a sign-up slot names.
+	"permission_override_signups_hint": "Take any slot, including ones this rank is not on the list for.",
+	"permission_edit_signups": "Edit sign-up slots",
+	// Moving and removing sign-ups that already exist. It never puts
+	// anybody on a shift, and the last sentence says so deliberately.
+	"permission_edit_signups_hint": "Move somebody to another slot, or take them off a shift. Never signs anybody up.",
 	"permission_manage_routes": "Edit routes",
 	"permission_manage_routes_hint": "Add and change routes, their badges, shares and images.",
 	"permission_manage_depots": "Edit depots",
@@ -220,6 +237,7 @@
 	// around the list itself.
 	"permissions_group_general": "General",
 	"permissions_group_dispatch": "Dispatch and shifts",
+	"permissions_group_signups": "Sign-ups",
 	"permissions_group_network": "Routes and depots",
 	"permissions_group_people": "People",
 	"permissions_group_settings": "Group settings",
@@ -285,6 +303,94 @@
 	// ─── signup ──────────────────────────────────────────────────
 	// Signing up for a shift.
 	"signup_discord_user": "Discord user",
+
+	// ─── signups ─────────────────────────────────────────────────
+	// The dashboard section where a group builds its sign-up sheets: the
+	// slots people put their name down for on a shift, and the ranks each
+	// slot is open to.
+	"signups_add_rank": "Add rank",
+	"signups_add_slot": "Add slot",
+	"signups_could_not_create_sheet": "Could not create that sheet",
+	"signups_could_not_delete_sheet": "Could not delete that sheet",
+	"signups_could_not_move": "Could not move that sign-up",
+	"signups_could_not_remove": "Could not remove that sign-up",
+	"signups_could_not_save_setting": "Could not save that setting",
+	"signups_could_not_save_sheet": "Could not save that sheet",
+	"signups_could_not_save_slots": "Could not save those slots",
+	"signups_create_sheet": "Create sheet",
+	// {sheet} — what the group called the sheet.
+	"signups_delete_confirm": "Delete “{sheet}”? Every sign-up made against it goes too.",
+	"signups_delete_sheet": "Delete sheet",
+	"signups_description_hint": "Optional. Shown under the heading, on the shift page and in Discord.",
+	"signups_description_placeholder": "e.g. Runs the shift from the dispatch room",
+	"signups_discord_channel_hint": "Where this sheet is posted before a shift.",
+	"signups_discord_hint": "Post this sheet in Discord as well as on the site. People pick a slot from the message.",
+	"signups_discord_section_hint": "Where this sheet is posted, if you use the bot.",
+	// The state a rank list is in when nobody has been added to it. It means
+	// everybody in the group can sign up, not that nobody can — which is why
+	// it is written out as a tag rather than left as an empty row.
+	"signups_every_member": "Everyone in the group",
+	"signups_every_rank_added": "Every rank is already on the list",
+	// {name} — the person who signed up. Opens a menu of things a host can
+	// do to their sign-up.
+	"signups_manage_signup": "Manage {name}’s sign-up",
+	"signups_move_slot_down": "Move slot down",
+	"signups_move_slot_up": "Move slot up",
+	// {slot} — the slot they are being moved to. On a sheet with more than
+	// one sheet in play it reads "Sheet name · Slot name".
+	"signups_move_to": "Move to {slot}",
+	"signups_moved": "Moved",
+	"signups_new_sheet": "New sheet",
+	"signups_new_sheet_hint": "A sheet applies to every shift the group runs. You add its slots next.",
+	"signups_no_sheets": "No sign-up sheets yet",
+	"signups_no_sheets_hint": "A sheet is the list of slots people put their name down for on a shift.",
+	"signups_no_slots_yet": "No slots yet",
+	// Shown in place of the Sign up button on a slot somebody may see but
+	// not take, which only happens for a host who may move other people
+	// into it.
+	"signups_not_for_your_rank": "Not your rank",
+	"signups_not_for_your_rank_hint": "This slot is for other ranks. You can see it because you may move people into it.",
+	// A sheet that exists but is not running. Short — it sits in a chip.
+	"signups_off": "Off",
+	// A sheet that is running. Short — it sits in a chip.
+	"signups_open": "Open",
+	"signups_open_sign_ups": "Open sign-ups",
+	"signups_open_sign_ups_hint": "Turning this off hides the sheet everywhere without deleting it.",
+	"signups_optional": "Optional",
+	"signups_page_description": "The slots people put their name down for. Each sheet applies to every shift.",
+	// Said of a sheet where each slot names its own ranks rather than the
+	// sheet naming one set for all of them.
+	"signups_per_slot_ranks": "Ranks set per slot",
+	// {rank} — the name of a Roblox rank.
+	"signups_remove_rank": "Remove {rank}",
+	"signups_remove_slot": "Remove slot",
+	"signups_removed": "Taken off the shift",
+	"signups_same_ranks_every_slot": "Same ranks for every slot",
+	"signups_same_ranks_every_slot_hint": "Turn this off to say who each slot is for separately.",
+	"signups_save_slots": "Save slots",
+	"signups_sheet_created": "Sheet created",
+	"signups_sheet_deleted": "Sheet deleted",
+	"signups_sheet_name": "Sheet name",
+	"signups_sheet_name_hint": "Shown as the heading on the shift page and in Discord.",
+	"signups_sheet_name_placeholder": "e.g. Shift team",
+	"signups_sheet_settings": "Sheet",
+	"signups_sheet_settings_hint": "What this sheet is called and whether it is running.",
+	// {count} — the number of slots on a sheet.
+	"signups_slot_count": "{count} slots",
+	"signups_slot_name_placeholder": "e.g. Dispatcher",
+	"signups_slot_ranks": "Ranks that can take this slot",
+	"signups_slots": "Slots",
+	"signups_slots_hint": "What people sign up for, and who is allowed to.",
+	"signups_slots_saved": "Slots saved",
+	// How many people a single slot takes. A column heading, so keep it short.
+	"signups_spaces": "Spaces",
+	// Removes somebody else from a slot. Not the same as withdrawing, which
+	// is what a person does to their own.
+	"signups_take_off_shift": "Take off shift",
+	"signups_unsaved_changes": "Unsaved changes",
+	"signups_who_can_sign_up": "Who can sign up",
+	"signups_who_can_sign_up_hint": "Add the ranks allowed to fill this sheet. With none added, every member of the group can.",
+	"signups_who_can_sign_up_per_slot_hint": "Each slot carries its own list. A slot with none on it is open to every member of the group.",
 
 	// ─── home ────────────────────────────────────────────────────
 	// The signed-out landing page and the signed-in home.
@@ -836,6 +942,9 @@
 	"dashboard_shifts_edit": "Edit",
 	"dashboard_shifts_edit_shift": "Edit shift",
 	"dashboard_shifts_new_shift": "New shift",
+	// The subtitle of the dashboard's Shifts page, which is about scheduling
+	// services. Signing up for one happens elsewhere.
+	"dashboard_shifts_page_description": "The services this group runs, and when they run.",
 	"dashboard_shifts_no_recurring_shifts_defined": "No recurring shifts defined.",
 	"dashboard_shifts_no_shifts_are_scheduled_next_month": "No shifts are scheduled for the next month.",
 	"dashboard_shifts_recurring_services_who_has_signed_up": "Recurring services and who has signed up for each one.",
