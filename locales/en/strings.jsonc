@@ -88,6 +88,7 @@
 	// English sentence the API returns; leave the key alone and translate
 	// only the value.
 	"api_error_a_depot_with_that_number_already_exists": "a depot with that number already exists",
+	"api_error_a_group_can_have_at_most_100_shifts": "A group can have at most 100 shifts.",
 	"api_error_a_route_with_that_name_already_exists": "a route with that name already exists",
 	"api_error_a_vehicle_cannot_tow_itself": "a vehicle cannot tow itself",
 	"api_error_already_signed_up_for_this_shift": "already signed up for this shift",
@@ -941,6 +942,7 @@
 	"dashboard_shifts_delete_confirm": "Delete “{shift}”? Signups for it will be removed too.",
 	"dashboard_shifts_edit": "Edit",
 	"dashboard_shifts_edit_shift": "Edit shift",
+	"dashboard_shifts_limit_reached": "100-shift limit reached",
 	"dashboard_shifts_new_shift": "New shift",
 	// The subtitle of the dashboard's Shifts page, which is about scheduling
 	// services. Signing up for one happens elsewhere.
@@ -1296,6 +1298,7 @@
 	"dispatch_vehicle_row_unassigned": "Unassigned",
 	"dispatch_vehicle_row_what_have_told_them": "What have you told them?",
 	"dispatch_vehicle_types_card_add_vehicle": "Add vehicle",
+	"dispatch_vehicle_types_card_limit_reached": "A group can classify at most 100 vehicle models.",
 	"dispatch_vehicle_types_card_could_not_save_those_vehicle_types": "Could not save those vehicle types",
 	// {name} is a vehicle model name, as the game spells it.
 	"dispatch_vehicle_types_card_listed_twice": "“{name}” is listed twice. Remove one before saving.",
