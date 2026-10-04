@@ -24,3 +24,5 @@ jobs:
       # beside it matches. Also the only thing standing between a stray comma
       # and a broken build.
       - run: node scripts/build.mjs --check
+      - run: node --test scripts/check.test.mjs
+      - run: node scripts/check.mjs
