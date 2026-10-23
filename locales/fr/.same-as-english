@@ -41,3 +41,6 @@ strings:shifts_participants
 strings:stage_pause
 strings:attendance_points_unit
 strings:promotions_points
+strings:attendance_promotions
+strings:attendance_sheet_total
+strings:attendance_tip_points
