@@ -2451,5 +2451,32 @@
 	// Bot configuration status and completion timing.
 	"dashboard_bot_minutes_after_shift_ends": "minutes after the shift ends",
 	"bot_role_picker_can_ping_role": "The bot can ping this role",
-	"bot_role_picker_cannot_ping_role": "The bot cannot ping this role"
+	"bot_role_picker_cannot_ping_role": "The bot cannot ping this role",
+
+	// Live game feed on the dispatch board. {route} is the route's in-game text, {vehicle} the vehicle number.
+	"dispatch_live_route_none": "The driver has not set a route on the vehicle",
+	"dispatch_live_route_unknown": "The driver is on {route}, which this group has not set up",
+	"dispatch_live_route_unassigned": "The driver is on {route}; nothing is assigned here yet",
+	"dispatch_live_route_matches": "The driver is on {route}, the route assigned here",
+	"dispatch_live_route_differs": "The driver is on {route}, not the route assigned here",
+	"dispatch_live_assigned_queued": "Waiting for the game's next request",
+	"dispatch_live_assigned_sent": "Sent to the game, waiting for it to confirm",
+	"dispatch_live_assigned_confirmed": "The game's dispatch tablet holds route {route}",
+	"dispatch_live_assigned_none": "The game's dispatch tablet holds no route for this vehicle",
+	"dispatch_live_tablet": "Tablet",
+	"dispatch_live_tablet_on": "The dispatch tablet is in the vehicle",
+	"dispatch_live_tablet_off": "No dispatch tablet in the vehicle. The driver will not see orders until one is placed",
+	"dispatch_live_orders": "Orders for vehicle {vehicle}",
+	"dispatch_live_stop": "Stop and wait",
+	"dispatch_live_continue": "Continue driving",
+	"dispatch_live_end_shift": "End shift",
+	"dispatch_live_order_sent": "Order queued for vehicle {vehicle}",
+	"dispatch_live_order_failed": "Could not send that order",
+	"dispatch_live_connected": "Live from the game",
+	"dispatch_live_connected_hint": "A hosted server is reporting to this room every few seconds. Changes here reach the drivers' tablets.",
+	"dispatch_live_waiting_vehicles": "Waiting for the game to report vehicles",
+	"dispatch_live_waiting_vehicles_hint": "The hosted server is connected. Vehicles appear here as soon as they spawn.",
+
+	// API error for a driver order sent when no game server feeds the room.
+	"api_error_no_game_server_is_connected_to_this_room": "No game server is connected to this room, so orders cannot reach drivers."
 }
