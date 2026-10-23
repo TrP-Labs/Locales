@@ -2537,5 +2537,35 @@
 	// API errors from promotions and demotions.
 	"api_error_their_standing_has_changed": "Their standing has changed since this page loaded. Refresh and try again.",
 	"api_error_only_ranks_below_your_own": "You can only move people between ranks below your own.",
-	"api_error_roblox_could_not_change_rank": "Roblox could not change that rank. Try again shortly."
+	"api_error_roblox_could_not_change_rank": "Roblox could not change that rank. Try again shortly.",
+
+	// Promotions and demotions page. {points} is a formatted number, {rank} a rank name, {name} a Roblox username, {count} a number.
+	"promotions_intro": "Who has earned a promotion or a demotion this month, from attendance and sign-ups against each rank's rules. Nothing changes until somebody presses the button.",
+	"promotions_connect_hint": "Changing somebody's Roblox rank needs a manager's explicit Roblox permission to edit the group's ranks. It is the same connection claimable ranks use.",
+	"promotions_read_only": "You can see these standings, but promoting and demoting needs the Promote and demote permission.",
+	"promotions_previous_month": "Previous month",
+	"promotions_next_month": "Next month",
+	"promotions_filter_all": "Everyone",
+	"promotions_filter_promote": "Promote",
+	"promotions_filter_demote": "Demote",
+	"promotions_incomplete": "Roblox did not answer for everybody, so this list may be missing people. Try again in a minute.",
+	"promotions_unconfigured": "No rank has a monthly bound with somewhere to go yet. Set them on each rank's Attendance tab, linked below.",
+	"promotions_empty": "Nobody to show",
+	"promotions_empty_hint": "Nobody attended or signed up for a shift this month, or nobody matches this filter.",
+	"promotions_points": "{points} points",
+	"promotions_shifts": "Shifts counted: {count}",
+	"promotions_min": "min {points}",
+	"promotions_max": "max {points}",
+	"promotions_promote_to": "Promote to {rank}",
+	"promotions_demote_to": "Demote to {rank}",
+	"promotions_suggest_promote": "Earned {rank}",
+	"promotions_suggest_demote": "Falls to {rank}",
+	"promotions_on_track": "Within bounds",
+	"promotions_rules_title": "Rules by rank",
+	"promotions_rules_hint": "Each rank's points, bounds and paths are set on its Attendance tab.",
+	"promotions_confirm_promote": "Promote {name} to {rank} on Roblox?",
+	"promotions_confirm_demote": "Demote {name} to {rank} on Roblox?",
+	"promotions_done": "{name} now holds {rank} on Roblox.",
+	"promotions_pending": "Roblox accepted the change for {name} but has not confirmed it yet. Refresh in a moment.",
+	"promotions_error": "Could not change that rank."
 }
