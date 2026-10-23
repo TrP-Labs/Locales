@@ -1941,7 +1941,7 @@
 	"host_saved": "Changes saved.",
 	"host_error": "Could not update the host room.",
 	"host_close": "Close room",
-	"host_close_hint": "Early closure requires Close room permission. Empty rooms close after the 30-minute wrap-up window.",
+	"host_close_hint": "Rooms close by themselves when the 30-minute wrap-up ends. Closing one earlier requires the Close room permission.",
 	"host_reference": "Reference point",
 	"host_start": "Start of shift",
 	"host_end": "End of shift",
@@ -2478,5 +2478,22 @@
 	"dispatch_live_waiting_vehicles_hint": "The hosted server is connected. Vehicles appear here as soon as they spawn.",
 
 	// API error for a driver order sent when no game server feeds the room.
-	"api_error_no_game_server_is_connected_to_this_room": "No game server is connected to this room, so orders cannot reach drivers."
+	"api_error_no_game_server_is_connected_to_this_room": "No game server is connected to this room, so orders cannot reach drivers.",
+
+	// Host page: the game clock and the live game-server feed. {seconds} is a whole number of seconds.
+	"host_up_next": "Up next",
+	"host_game_time": "In game",
+	"host_game_time_hint": "The time of day on the game server, as it last reported it",
+	"host_feed_title": "Game server",
+	"host_feed_live": "Receiving",
+	"host_feed_stopped": "Stopped",
+	"host_feed_none": "Not connected",
+	"host_feed_last_report": "Last request",
+	"host_feed_seconds_ago": "{seconds}s ago",
+	"host_feed_runtime": "Server runtime",
+	"host_feed_players": "Players",
+	"host_feed_queued": "Orders waiting",
+	"host_feed_routes": "Routes on the server",
+	"host_feed_stopped_hint": "The server has stopped reporting. Dispatch falls back to importing vehicles by hand until it reconnects.",
+	"host_feed_none_hint": "No hosted server has reported for this group yet. Turn on the live connection in the server's settings to fill the board automatically."
 }
