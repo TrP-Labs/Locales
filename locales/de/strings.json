@@ -2186,5 +2186,12 @@
 	"attendance_tip_no_slot": "Keiner",
 	"attendance_tip_points": "Punkte",
 	"attendance_no_show": "Punktabzug bei Nichterscheinen",
-	"attendance_no_show_hint": "Wird abgezogen, wenn sich jemand für einen Platz einträgt und nicht erscheint, bei einer Schicht, die ein Server erfasst hat. 0 schaltet das aus."
+	"attendance_no_show_hint": "Wird abgezogen, wenn sich jemand für einen Platz einträgt und nicht erscheint, bei einer Schicht, die ein Server erfasst hat. 0 schaltet das aus.",
+	"attendance_tip_jobs": "Tätigkeiten",
+	"attendance_job_driver_shift": "Fahrer (Fahrplan)",
+	"attendance_job_free_drive": "Fahrer (freie Fahrt)",
+	"attendance_job_service_driver": "Servicefahrer",
+	"attendance_job_conductor": "Schaffner",
+	"attendance_job_dispatcher": "Disponent",
+	"attendance_job_depot_worker": "Depotmitarbeiter"
 }

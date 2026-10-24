@@ -2186,5 +2186,12 @@
 	"attendance_tip_no_slot": "Немає",
 	"attendance_tip_points": "Бали",
 	"attendance_no_show": "Штраф за неявку",
-	"attendance_no_show_hint": "Віднімається, коли хтось записався на місце й не прийшов на зміну, яку відстежував сервер. 0 вимикає штраф."
+	"attendance_no_show_hint": "Віднімається, коли хтось записався на місце й не прийшов на зміну, яку відстежував сервер. 0 вимикає штраф.",
+	"attendance_tip_jobs": "Професії",
+	"attendance_job_driver_shift": "Водій (за розкладом)",
+	"attendance_job_free_drive": "Водій (вільна їзда)",
+	"attendance_job_service_driver": "Водій службового транспорту",
+	"attendance_job_conductor": "Кондуктор",
+	"attendance_job_dispatcher": "Диспетчер",
+	"attendance_job_depot_worker": "Працівник депо"
 }

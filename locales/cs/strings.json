@@ -2186,5 +2186,12 @@
 	"attendance_tip_no_slot": "Žádné",
 	"attendance_tip_points": "Body",
 	"attendance_no_show": "Ztracené body za nedostavení",
-	"attendance_no_show_hint": "Odečtou se, když se někdo přihlásí na místo a nepřijde, na směně, kterou sledoval server. Hodnota 0 to vypne."
+	"attendance_no_show_hint": "Odečtou se, když se někdo přihlásí na místo a nepřijde, na směně, kterou sledoval server. Hodnota 0 to vypne.",
+	"attendance_tip_jobs": "Povolání",
+	"attendance_job_driver_shift": "Řidič (jízdní řád)",
+	"attendance_job_free_drive": "Řidič (volná jízda)",
+	"attendance_job_service_driver": "Řidič servisního vozidla",
+	"attendance_job_conductor": "Průvodčí",
+	"attendance_job_dispatcher": "Dispečer",
+	"attendance_job_depot_worker": "Pracovník depa"
 }

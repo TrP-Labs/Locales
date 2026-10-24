@@ -2186,5 +2186,12 @@
 	"attendance_tip_no_slot": "Aucune",
 	"attendance_tip_points": "Points",
 	"attendance_no_show": "Points perdus en cas d'absence",
-	"attendance_no_show_hint": "Retirés lorsque quelqu'un s'inscrit sur une place et ne se présente pas, sur un service suivi par un serveur. 0 désactive cette pénalité."
+	"attendance_no_show_hint": "Retirés lorsque quelqu'un s'inscrit sur une place et ne se présente pas, sur un service suivi par un serveur. 0 désactive cette pénalité.",
+	"attendance_tip_jobs": "Métiers",
+	"attendance_job_driver_shift": "Conducteur (horaires)",
+	"attendance_job_free_drive": "Conducteur (conduite libre)",
+	"attendance_job_service_driver": "Conducteur de service",
+	"attendance_job_conductor": "Receveur",
+	"attendance_job_dispatcher": "Régulateur",
+	"attendance_job_depot_worker": "Agent de dépôt"
 }

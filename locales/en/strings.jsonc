@@ -2620,5 +2620,12 @@
 	"attendance_tip_no_slot": "None",
 	"attendance_tip_points": "Points",
 	"attendance_no_show": "Points lost for a no-show",
-	"attendance_no_show_hint": "Taken off when somebody signs up for a slot and does not turn up, on a shift a server tracked. 0 turns this off."
+	"attendance_no_show_hint": "Taken off when somebody signs up for a slot and does not turn up, on a shift a server tracked. 0 turns this off.",
+	"attendance_tip_jobs": "Careers",
+	"attendance_job_driver_shift": "Driver (timetable)",
+	"attendance_job_free_drive": "Driver (free drive)",
+	"attendance_job_service_driver": "Service driver",
+	"attendance_job_conductor": "Conductor",
+	"attendance_job_dispatcher": "Dispatcher",
+	"attendance_job_depot_worker": "Depot worker"
 }
